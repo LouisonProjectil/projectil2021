@@ -1,0 +1,513 @@
+@charset "UTF-8";
+/* BASE */
+html {
+  font-size: .625em;
+  /* fallback IE8+ */
+  font-size: calc(1em * .625);
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a:focus, a:active {
+  outline: 0 !important;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1.5rem 4rem;
+  border-radius: 30px;
+}
+
+/* FONTS */
+/* VARIABLE */
+body {
+  --or: #FF6700;
+  --bl: #4234EA;
+}
+
+/* Header */
+header {
+  padding: 2rem 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .header_medium_content a {
+  margin: 0 3rem;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+header a {
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* HOME */
+.hero .container {
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .container .home_hero_left_content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .container .home_hero_left_content .home_baseline_content .baseline {
+  font-size: 3rem;
+}
+
+.hero .container .home_hero_left_content .home_baseline_content .baseline span {
+  color: var(--or);
+}
+
+.hero .container .home_hero_left_content .home_baseline_content .hero_button_container {
+  margin: 3rem 0;
+}
+
+.hero .container .home_hero_left_content .home_baseline_content .hero_button_container .hero_button_agence {
+  margin-right: 2rem;
+}
+
+.hero .container .home_hero_left_content .home_hero_social {
+  margin-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.hero .container .home_hero_left_content .home_hero_social .home_hero_social_content .home_hero_mail {
+  margin-right: 6rem;
+}
+
+.hero .container .home_hero_left_content .home_hero_social .home_hero_social_content .home_hero_mail::before {
+  content: "🖍 ";
+}
+
+.hero .container .home_hero_left_content .home_hero_social .home_hero_social_content .home_hero_phone {
+  padding-left: 2.2rem;
+}
+
+.hero .container .home_hero_left_content .home_hero_social .home_hero_social_content .home_hero_social_picto {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .container .home_hero_left_content .home_hero_social .home_hero_social_content .home_hero_social_picto a {
+  margin: 0 1rem;
+}
+
+.hero .container .home_hero_right_content {
+  width: 50%;
+}
+
+.home_metiers .container .home_metiers_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10rem;
+}
+
+.home_metiers .container .home_metiers_intro h2 {
+  font-size: 6rem;
+}
+
+.home_metiers .container .home_metiers_intro .home_metiers_sous_titre {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.home_metiers .container .home_metiers_categories {
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left, .home_metiers .container .home_metiers_categories .home_metiers_categories_right {
+  width: 50%;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left h3, .home_metiers .container .home_metiers_categories .home_metiers_categories_right h3 {
+  font-size: 5rem;
+  font-weight: 300;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left .home_metiers_category_texte, .home_metiers .container .home_metiers_categories .home_metiers_categories_right .home_metiers_category_texte {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left .home_metiers_category_domaines, .home_metiers .container .home_metiers_categories .home_metiers_categories_right .home_metiers_category_domaines {
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  color: var(--or);
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left .btn, .home_metiers .container .home_metiers_categories .home_metiers_categories_right .btn {
+  color: var(--or);
+  background-color: white;
+  border: 1px solid var(--or);
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_categories_left .btn:after, .home_metiers .container .home_metiers_categories .home_metiers_categories_right .btn:after {
+  content: url(../img/right_arrow.png);
+  margin-left: 2rem;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_image_box_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home_metiers .container .home_metiers_categories .home_metiers_image_box_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home_mairie {
+  background-color: #F9F6EC;
+}
+
+.home_mairie .container {
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home_mairie .container .home_mairie_left {
+  width: 50%;
+}
+
+.home_mairie .container .home_mairie_left h3 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.home_mairie .container .home_mairie_left .separateur_mairie {
+  margin: 1rem 0 2rem 0;
+  height: 2px;
+  width: 200px;
+  background-color: black;
+}
+
+.home_mairie .container .home_mairie_left .home_mairie_offre {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.home_mairie .container .home_mairie_left .home_mairie_offre:after {
+  content: url(../img/black_right_arrow.png);
+  margin-left: 1.5rem;
+}
+
+.home_mairie .container .home_mairie_right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home_regie {
+  background-color: var(--or);
+}
+
+.home_regie .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10rem 0;
+}
+
+.home_regie .container .home_regie_left, .home_regie .container .home_regie_right {
+  width: 50%;
+  color: white;
+}
+
+.home_regie .container .home_regie_left h3, .home_regie .container .home_regie_right h3 {
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.home_regie .container .home_regie_left .home_regie_texte, .home_regie .container .home_regie_right .home_regie_texte {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+}
+
+.home_regie .container .home_regie_left .btn, .home_regie .container .home_regie_right .btn {
+  display: inline;
+  color: white;
+  background-color: var(--or);
+  border: 1px solid white;
+}
+
+.home_regie .container .home_regie_left .btn:after, .home_regie .container .home_regie_right .btn:after {
+  content: url(../img/arrow_white.png);
+  margin-left: 2rem;
+}
+
+.home_regie .container .home_regie_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home_slider_part .container {
+  padding: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home_testimonials .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home_testimonials .container .home_testimonials_left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home_testimonials .container .home_testimonials_left .home_testimonials_texte {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.home_testimonials .container .home_testimonials_left .separateur_testimonials {
+  margin: 1rem 0 2rem 0;
+  height: 2px;
+  width: 200px;
+  background-color: black;
+}
+
+.home_testimonials .container .home_testimonials_left .home_testimonials_identite {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.home_testimonials .container .home_testimonials_right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=style.css.map */
